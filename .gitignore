@@ -12,9 +12,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Database
-chroma_db/
-*.sqlite3
 
 # Executables / large binaries
 *.exe
