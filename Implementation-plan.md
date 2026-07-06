@@ -33,8 +33,8 @@ This implementation plan details the phase-wise execution strategy for building 
 - **Example Queries:** Provide 3 clickable buttons for example questions to guide user interaction.
 
 ## Phase 6: Scheduler Component
-- **Cron/Scheduler:** Implement a scheduling mechanism (e.g., using `schedule` Python library, a system cron job, or GitHub Actions) to run the `ingest.py` script automatically every day.
-- **Data Refresh:** Ensure the script overwrites or cleanly updates the vector database (`chroma_db`) so the assistant always retrieves the most recent NAV, expense ratios, and fund metrics.
+- **GitHub Actions Cron:** Implement a GitHub Actions workflow (e.g., `.github/workflows/schedule.yml`) with a cron trigger to run the `ingest.py` script automatically every day.
+- **Data Refresh:** Ensure the GitHub Actions runner updates the vector database (`chroma_db`) and commits the changes back to the repository, so the assistant always retrieves the most recent NAV, expense ratios, and fund metrics.
 
 ## Phase 7: Testing & Validation
 - **Accuracy Testing:** Test factual queries specific to the 5 ingested schemes (e.g., expense ratios, lock-in periods).
